@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Movies & Series App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    header {
+      padding: 30px 0;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #ffcc00;
+    }
+    header p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      margin: 20px 0;
+      overflow: hidden;
+    }
+    .slides {
+      display: none;
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    .features {
+      margin: 40px 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .feature {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .feature h3 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+    .cta {
+      margin: 30px 0;
+    }
+    .cta a {
+      background: #ffcc00;
+      color: #000;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 15px 30px;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(255,204,0,0.4);
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .cta a:hover {
+      background: #e6b800;
+      box-shadow: 0 5px 20px rgba(255,204,0,0.6);
+    }
+    .compatibility {
+      font-size: 1rem;
+      color: #4caf50; /* Green color for emphasis */
+      font-weight: 600;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Unlimited Movies & Series</h1>
+    <p>Stream the latest movies & TV shows directly on your phone!</p>
+  </header>  <div class="slideshow-container">
+    <img class="slides fade" src="https://iili.io/KnacT5x.jpg" alt="Slide 1">
+    <img class="slides fade" src="https://iili.io/KnacxUb.jpg" alt="Slide 2">
+    <img class="slides fade" src="https://iili.io/KnacuOQ.jpg" alt="Slide 3">
+  </div>  <section class="features">
+    <div class="feature">
+      <h3>🔥 Latest Releases</h3>
+      <p>Enjoy the newest movies & series as soon as they drop.</p>
+    </div>
+    <div class="feature">
+      <h3>📱 Easy to Use</h3>
+      <p>Simple interface designed for smooth streaming experience.</p>
+    </div>
+    <div class="feature">
+      <h3>💯 100% Free</h3>
+      <p>Get unlimited access after a quick verification step.</p>
+    </div>
+  </section>  <div class="cta">
+    <p class="compatibility">✔ Works on Android & iOS devices</p>
+    <!-- Replace YOUR_OGADS_LINK with your actual OGAds link -->
+    <a href="YOUR_OGADS_LINK" target="_blank">Download App Now</a>
+  </div>  <footer>
+    <p>© 2025 Movies & Series App. All rights reserved.</p>
+  </footer>  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  </script></body>
+</html>
